@@ -1,0 +1,243 @@
+<!
+Nathan Greenlaw
+Professional Website>
+
+
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+	background: #ECECEA;
+}
+    
+h1 {
+	padding: 14px;
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 36;
+    color: #ECECEA;
+    text-align: left;
+	text-shadow: 4px 4px #D9853B;
+}
+
+h2 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 36;
+    color: #558C89;
+    text-align: left;
+	text-shadow: 4px 4px #ECECEA;
+}
+
+img{
+	border-radius: 4px;
+}
+
+img.align-right {
+	float: right;
+	margin-left: 10px;
+}
+	
+.flex-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+}
+
+.navi_bar_list {
+	background: linear-gradient(to bottom right,#d9853b, #d9ac3b, #d95d3b);
+	overflow: hidden;
+	list-style-type: none;
+	margin: 0;
+	text-align: center;
+}
+
+.navi_bar_item {
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	float: none;
+}
+
+.navi_bar_item:hover {
+	background-color: #ECECEA;
+	color: black;
+}
+
+.navi_bar_li {
+	display: inline-block;
+	float: none;
+}
+
+.top_div_class {
+	background-color: #74AFAD;
+}
+
+#intro_div {
+	background: linear-gradient(#dbfff4,#74AFAD,#558C89);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+	height: 100%;
+	width: 100%;
+}
+
+#intro_first_section{
+    color: #ECECEA;
+}
+
+#resume_div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+}
+
+#my_resume {
+	flex-grow: 2;
+	flex-basis: 50%;
+}
+
+#resume_left_div {
+	flex-basis: 25%;
+}
+
+#resume_right_div {
+	flex-basis: 25%;
+}
+
+#page_div {
+	background: linear-gradient(#ececea,#d3d3a7,#d3c8a7);
+}
+
+#top_button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #D9853B;
+  color: #ECECEA;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#top_button:hover {
+  background-color: gray;
+}
+
+</style>
+</head>
+
+<body>
+<button onclick="topFunction()" id="top_button" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("top_button").style.display = "block";
+    } else {
+        document.getElementById("top_button").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+	<div id="top_div" class="top_div_class">
+		<ul id="navi_bar" class="navi_bar_list">
+			<li class="navi_bar_li"><a href="#intro_name_title" class="navi_bar_item">Home</a></li>
+			<li class="navi_bar_li"><a href="#me_title" class="navi_bar_item">Resume</a></li>
+			<li class="navi_bar_li"><a href="#life_title" class="navi_bar_item">Story</a></li>
+			<li class="navi_bar_li"><a href="#am_title" class="navi_bar_item">About Me</a></li>
+			<li class="navi_bar_li"><a href="#contact_title" class="navi_bar_item">Contact</a></li>
+		</ul>
+	</div>
+
+	<div id="intro_div" class="flex-container">
+		<h1 id="intro_name_title">Nathan Greenlaw</h1>
+		<img src="nathan.jpg" alt="Picture of Me">
+		<p id="intro_first_section" style="text-align:center">
+			Hello and welcome to the website of Nathan Greenlaw! 
+			I am glad to have you here and hope that you enjoy learning about me!<br> 
+			I have organized the website in such a way that people searching for my professional resume 
+			will not have to look far but the ones interested in learning more about me can have access to it!</p>
+	</div>
+	
+	<div id="page_div">
+		<h2 id="me_title" style="text-align:center">This Is Me!</h2>
+		<div id="resume_div" class="flex-container">
+			<div id="resume_left_div" class="flex-container">
+				<h2 id="resume_title" style="margin: 14px">My Resume</h2>
+				<p style="margin: 14px">
+					In the middle here is my current resume. This contains all of the professional information that one would like to know! </p>
+				</p>
+			</div>
+			<iframe id="my_resume" src="https://drive.google.com/file/d/1qFbEzNzywjwsrHP1Waltq9kF0x1CkiDC/preview" width="640" height="640"></iframe>
+			<div id="resume_right_div" class="flex-container">
+				<h2 id="resume_title" style="margin: 14px">My Links</h2>
+				<p id="resume_links_section" style="text-align:center; margin: 14px">
+					The links below will redirect to other sites that have information about me!
+				</p>
+				<ul id="links_list" style="list-style-type:square">
+					<li>Github <a href="https://github.com/ngreenlaw">redirect</a></li>
+					<li>LinkedIn <a href="https://www.linkedin.com/in/nathan-greenlaw/">redirect</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="life_div" class="flex-container">
+			<h2 id="life_title">What I am Currently Up To</h2>
+			<p id="life_first_section" style="text-align:center">
+				Currently I am finishing up school online at Oregon State University and looking for part-time work to do
+				while taking courses. Currently I am looking into tutoring as I enjoy teaching and working with kids and math
+				is my strong subject which people are always looking for. I am also available for soccer training if you are located in the Sacramento, CA area.
+				<br><br> I am also starting the search for full-time work in the fields of Programming, Software Engineering, Verification or Analytics on the West Coast.
+			</p>
+		</div>
+	  
+		<div id="about_me_div" class="flex-container">
+			<h2 id="am_title">Fun Facts About Me</h2>
+			<ul id="am_list" style="list-style-type:square">
+				<li>I wrote and designed the code for this website</li>
+				<li>Halloween is my favorite holiday and I enjoy making a Haunted House out of the Garage and people would come to the neighborhood just to see it</li>
+				<li>In high school I played Trumpet and was chosen as a Northern California Music Ambassador to play in a band that traveled to 7 different European Countries</li>
+				<li>I learned how to sail a boat at UCSB</li>
+				<li>For the majority of my childhood I made intricate box forts with my friend containing multiple rooms and creative layouts</li>
+				<li>I played division 1 soccer until I was 18 years old</li>
+				<li>I refereed soccer in high school and all 4 years I was at UCSB</li>
+				<li>I taught personal lessons for soccer for many years with all different ages</li>
+				<li>I love Dogs and have had several over the years, along with a couple of pet rats when I was younger</li>
+				<li>I play Dungeons and Dragons and other pen and paper RPGS with different friends I have made throughout the years</li>
+				<li>I created a Science Fiction/Fantasy World that I use for pen and paper RPGS and I am writing a book about a campaign I ran</li>
+				<li>I enjoy video games and Nintendo is my favorite developer with Zelda being my favorite series</li>
+				<li>I like playing the Blizzard games Heroes of the Storm and Overwatch and am always looking for more friends to play with</li>
+				<li>I also love board games and my favorite one is Dominion, although there are so many to choose from!</li>
+			</ul>
+		</div>
+		
+		<div id="contact_me" class="flex-container">
+			<h2 id="contact_title" style="text-align:center">Contact Me!</h2>
+			<p style="text-align:center"> Feel free to contact me about anything! My email is greenlaw_nathan@hotmail.com or can be found on my resume in the resume section.</p>
+		</div>
+	</div>
+</body>
+</html>
